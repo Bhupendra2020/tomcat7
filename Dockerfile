@@ -11,6 +11,8 @@ RUN apt-get -qq install tomcat7
 RUN apt-get -qq install curl
 RUN apt-get -qq install bash
 
+VOLUME ["/deployment"]
+
 ADD run.sh /opt/run.sh
 RUN chmod +x /opt/run.sh
 
