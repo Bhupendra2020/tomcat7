@@ -19,4 +19,4 @@ RUN mv /etc/cron.daily/logrotate /etc/cron.hourly/logrotate
 ADD logrotate /etc/logrotate.d/tomcat7
 RUN chmod 644 /etc/logrotate.d/tomcat7
 
-ENTRYPOINT ["/opt/start-tomcat.sh"]
+ENTRYPOINT ["/opt/run.sh"]
