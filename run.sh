@@ -31,4 +31,4 @@ chown tomcat7:tomcat7 /deployment
 service tomcat7 restart
 
 #Run bash to keep container running and provide interactive mode
-bash
+#bash
