@@ -1,5 +1,5 @@
 FROM ubuntu
-MAINTAINER Maluuba Infrastructure Team <infrastructure@maluuba.com>
+MAINTAINER Bhupendra Kumar <Bhupendra.kumar@softcrylic.com>
 
 EXPOSE 8080
 
@@ -11,12 +11,12 @@ RUN apt-get -qq install tomcat7
 RUN apt-get -qq install curl
 RUN apt-get -qq install bash
 
-ADD start-tomcat.sh /opt/start-tomcat.sh
-RUN chmod +x /opt/start-tomcat.sh
+ADD run.sh /opt/run.sh
+RUN chmod +x /opt/run.sh
 
-RUN mv /etc/cron.daily/logrotate /etc/cron.hourly/logrotate
+RUN mv /etc/cron.daily/rotatelog /etc/cron.hourly/rotatelog
 
-ADD logrotate /etc/logrotate.d/tomcat7
-RUN chmod 644 /etc/logrotate.d/tomcat7
+ADD rotatelog /etc/rotatelog.d/tomcat7
+RUN chmod 644 /etc/rotatelog.d/tomcat7
 
 ENTRYPOINT ["/opt/run.sh"]
