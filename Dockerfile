@@ -14,9 +14,4 @@ RUN apt-get -qq install bash
 ADD run.sh /opt/run.sh
 RUN chmod +x /opt/run.sh
 
-RUN mv /etc/cron.daily/rotatelog /etc/cron.hourly/rotatelog
-
-ADD rotatelog /etc/rotatelog.d/tomcat7
-RUN chmod 644 /etc/rotatelog.d/tomcat7
-
 ENTRYPOINT ["/opt/run.sh"]
