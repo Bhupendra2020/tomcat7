@@ -17,6 +17,9 @@ RUN wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VERSION
     rm apache-tomcat-*.tar.gz && \
     mv apache-tomcat* tomcat
 
+RUN mkdir /deployment
+
+VOLUME /deployment
 
 ADD create_tomcat_admin_user.sh /create_tomcat_admin_user.sh
 ADD setenv.sh /${CATALINA_HOME}/bin/setenv.sh
