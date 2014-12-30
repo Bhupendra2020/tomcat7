@@ -1,4 +1,4 @@
-tomcat7
+Tomcat7
 =======
 Base docker image to run a Tomcat application server
 
