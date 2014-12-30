@@ -45,8 +45,8 @@ In this case, `b1uKcRK3r6SF` is the password allocated to the `admin` user.
 
 You can now login to you admin console to configure your tomcat server:
 
-    http://127.0.0.1:8080/manager/html
-    http://127.0.0.1:8080/host-manager/html
+    http://0.0.0.0:8080/manager/html
+    http://0.0.0.0:8080/host-manager/html
 
 
 Setting a specific password for the admin account
@@ -59,6 +59,6 @@ set the environment variable `TOMCAT_PASS` to your specific password when runnin
 
 You can now test your deployment:
 
-    http://127.0.0.1:8080/
+    http://0.0.0.0:8080/
 
 Done!
