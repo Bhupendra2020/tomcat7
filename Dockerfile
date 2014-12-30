@@ -17,8 +17,8 @@ RUN wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VERSION
     rm apache-tomcat-*.tar.gz && \
     mv apache-tomcat* tomcat
 
-RUN wget -q https://github.com/Bhupendra2020/broadleafdemosite/blob/master/site/deployement/site-1.0.war && \
-    mv site-1.0.war tomcat/webapps
+#RUN wget -q https://github.com/Bhupendra2020/broadleafdemosite/blob/master/site/deployement/site-1.0.war && \
+#    mv site-1.0.war tomcat/webapps
 
 ADD create_tomcat_admin_user.sh /create_tomcat_admin_user.sh
 ADD setenv.sh /${CATALINA_HOME}/bin/setenv.sh
