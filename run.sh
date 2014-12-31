@@ -7,7 +7,7 @@ if [ -d $DIR ]; then
      file=$(basename $i)
      echo "Linking $i --> /tomcat/webapps/$file"
      ln -s $i /tomcat/webapps/$file
-     cp $DIR/$file /tomcat/webapps/$file
+     #cp $DIR/$file /tomcat/webapps/$file
   done
 fi
 
